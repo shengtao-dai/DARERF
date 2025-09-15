@@ -1,0 +1,18 @@
+Package: DARERF
+Type: Package
+Title: Distributionally Adaptive Regression Estimator under Random Forest
+Version: 0.1.0
+Authors@R: c(person(given = "Shengtao", family = "Dai", role = c("aut", "cre"), email = "shengtao.dai@bc.edu"))
+Description: Provides distributionally adaptive regression estimator under Random Forest.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.6)
+Imports: quantregForest
+Suggests: testthat (>= 3.0.0), roxygen2
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2025-08-31 19:38:12 UTC; daishengtao
+Author: Shengtao Dai [aut, cre]
+Maintainer: Shengtao Dai <shengtao.dai@bc.edu>
