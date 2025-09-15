@@ -4,12 +4,17 @@ Distributionally Adaptive Regression Estimator under Random Forest
 ## Installation
 
 ```r
-# Install devtools if needed
-# install.packages("devtools")
+# Option 1: pak (recommended)
+install.packages("pak")
+pak::pak("shengtao-dai/DARERF")
 
-devtools::install_local("DARERF", upgrade = "never")
-# or build first:
-# devtools::build("DARERF"); devtools::install("DARERF_0.1.0.tar.gz")
+# Option 2: remotes
+install.packages("remotes")
+remotes::install_github("shengtao-dai/DARERF")
+
+# Option 3: devtools
+install.packages("devtools")
+devtools::install_github("shengtao-dai/DARERF")
 ```
 
 ## Usage
