@@ -22,7 +22,6 @@ rf_eq_estimate <- function(Y, X, x0, nsize = 20, c_band = 1, K_grid, L = 5, ntr 
     x = X, y = Y, ntree = ntr, mtry = mtry, nodesize = nsize, keep.inbag = TRUE
   )
   
-  # 关键：stats::predict + stats::ecdf
   Fi <- stats::predict(qrf_model, newdata = x0m, what = stats::ecdf)
   if (is.list(Fi)) Fi <- Fi[[1]]
   
