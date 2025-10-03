@@ -11,7 +11,7 @@
 cv_select_K_ml <- function(Y, X, K_grid, L, h, nsize) {
   X <- as.matrix(X)
   n <- length(Y); p <- ncol(X)
-  # 修复 rep.int(length.out=) 的错误
+
   folds <- sample(rep_len(seq_len(L), n))
   
   MSE_mat <- matrix(NA_real_, nrow = L, ncol = length(K_grid))
@@ -28,7 +28,6 @@ cv_select_K_ml <- function(Y, X, K_grid, L, h, nsize) {
       x = X_train, y = Y_train, ntree = 1000L, mtry = mtry, nodesize = nsize, keep.inbag = TRUE
     )
     
-    # 关键：使用 stats::predict（quantregForest 不导出 predict）
     condEcdf <- stats::predict(qrf_model, newdata = X_test, what = stats::ecdf)
     
     for (k_idx in seq_along(K_grid)) {
