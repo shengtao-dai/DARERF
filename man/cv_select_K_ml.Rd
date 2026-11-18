@@ -2,7 +2,7 @@
 % Please edit documentation in R/cv_select_K_ml.R
 \name{cv_select_K_ml}
 \alias{cv_select_K_ml}
-\title{Cross-validated K selection for QRF equivalent-kernel weights}
+\title{Cross-validated selection of the number of quantiles K (random forest)}
 \usage{
 cv_select_K_ml(Y, X, K_grid, L, h, nsize)
 }
@@ -23,5 +23,7 @@ cv_select_K_ml(Y, X, K_grid, L, h, nsize)
 A list with K_opt, avg_MSE, and MSE_mat.
 }
 \description{
-Cross-validated K selection for QRF equivalent-kernel weights
+For each fold, fits a 1000-tree quantile regression forest on the other
+folds and computes the out-of-fold mean squared error of the DARE
+prediction for every candidate K.
 }

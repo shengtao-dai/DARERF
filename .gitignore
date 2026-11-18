@@ -3,8 +3,6 @@
 .RData
 .Ruserdata
 .DS_Store
-.Rbuildignore
 .Rproj
 inst/doc
 docs
-pkgdown

@@ -1,4 +1,8 @@
-#' Cross-validated K selection for QRF equivalent-kernel weights
+#' Cross-validated selection of the number of quantiles K (random forest)
+#'
+#' For each fold, fits a 1000-tree quantile regression forest on the other
+#' folds and computes the out-of-fold mean squared error of the DARE
+#' prediction for every candidate K.
 #'
 #' @param Y Numeric vector length n.
 #' @param X Numeric matrix/data.frame n x p.
